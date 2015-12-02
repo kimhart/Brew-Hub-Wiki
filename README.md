@@ -24,9 +24,9 @@ Click [here](http://kimhart.github.io/Project2_Wiki/) to view now.
 
 ## Front-end Wireframes
 #### Splash/Login
-![splash](/public/img/WF_splash_login.jpg)
+![splash](/public/img/WF_splash_login.png =250x)
 #### Home/Index
-![index](/public/img/WF_index_page.jpg)
+![index](/public/img/WF_index_page.png =250x)
 
 ## ERD/Data Models 
 
