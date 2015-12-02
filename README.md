@@ -1,23 +1,23 @@
-Welcome to Project 2: A Wiki ABOUT..........
+# Welcome to Project 2: A Wiki ABOUT..........
 
-# Description
+## Description
 *tbd
 
-# Check it out here!
+## Check it out here!
 http://kimhart.github.io/Project2_Wiki/
 
-# List of Technologies
+## List of Technologies
 * HTML
 * CSS
 * JS/jQuery
 * Ruby/Sinatra
 * ActiveRecord/SQL
 
-# User Stories
+## User Stories
 * tbd
 
-# Front-end Wireframes
+## Front-end Wireframes
 * tbd
 
-# ERD/Data Models 
+## ERD/Data Models 
 * tbd
