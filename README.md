@@ -31,9 +31,9 @@
 ![new_article](/public/img/WF_new_article.png)
 #### Edit Article
 ![edit_article](/public/img/WF_edit.png)
-#### Edit Article
+#### Browse All Articles
 ![all_articles](/public/img/WF_all_articles.png)
-#### Categories
+#### Browse Categories
 ![categories](/public/img/WF_categories.png)
 
 ## ERD/Data Models 
