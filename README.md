@@ -23,7 +23,10 @@ Click [here](http://kimhart.github.io/Project2_Wiki/) to view now.
 * User should be able to see each article's author, the time and date it was posted, the corresponding categor(ies), and when the post was last edited. 
 
 ## Front-end Wireframes
-Coming soon!
+#### Splash/Login
+![splash](/public/img/WF_splash_login.jpg)
+#### Home/Index
+![index](/public/img/WF_index_page.jpg)
 
 ## ERD/Data Models 
 
