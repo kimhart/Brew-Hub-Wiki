@@ -1,10 +1,11 @@
 # Welcome to Project 2: A Super Useful Wiki!
 
 ## Description
-*Company X* wanted an easier way for employees to communicate internally on an informational message board. Using this wiki, team members can post company information, write articles, and publicly share thoughts and memos. This collaborative tool helps *Company X* stay connected and meet their goals.
+*Company X* wanted an easier way for colleagues to communicate on an internally-facing wiki. With this full-stack web app, team members can post company information, write articles, and publicly share insights and memos. This collaborative tool helps *Company X* stay connected and meet their goals.
 
-## Check it out here!
-http://kimhart.github.io/Project2_Wiki/
+## Check it out!
+
+Click [here](http://kimhart.github.io/Project2_Wiki/) to view now.
 
 ## List of Technologies
 * HTML
@@ -26,5 +27,4 @@ Coming soon!
 
 ## ERD/Data Models 
 
-Initial ERD:
 ![ERD](/db/ERD.jpg)
