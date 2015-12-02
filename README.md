@@ -27,4 +27,4 @@ Coming soon!
 
 ## ERD/Data Models 
 
-![ERD](/db/ERD.jpg)
+![ERD](/public/img/ERD.jpg)
