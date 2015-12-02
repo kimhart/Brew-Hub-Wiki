@@ -1,7 +1,7 @@
-# Welcome to Project 2: BrewHub Wiki
+# Project 2: BrewHub Wiki
 
 ## Description
-*Company X* needed an easy way for colleagues to communicate internally. With this full-stack web app, team members can post company information, write articles, and publicly share insights and memos. This collaborative tool helps *Company X* stay connected and meet their goals.
+*Brewery X* needed an easy way for colleagues and beer lovers to communicate about brewery events, new beer, and homebrewing tips. With this full-stack web app, users can read, write and edit shared articles surrounding craft beer culture. 
 
 ## Check it out!
 
