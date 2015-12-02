@@ -1,7 +1,7 @@
 # Welcome to Project 2: A Super Useful Wiki!
 
 ## Description
-*Company X* wanted an easier way for colleagues to communicate on an internally-facing wiki. With this full-stack web app, team members can post company information, write articles, and publicly share insights and memos. This collaborative tool helps *Company X* stay connected and meet their goals.
+*Company X* needed an easy way for colleagues to communicate internally. With this full-stack web app, team members can post company information, write articles, and publicly share insights and memos. This collaborative tool helps *Company X* stay connected and meet their goals.
 
 ## Check it out!
 
