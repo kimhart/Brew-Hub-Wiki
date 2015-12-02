@@ -1,7 +1,7 @@
 # Welcome to Project 2: A Wiki ABOUT..........
 
 ## Description
-*tbd
+* TBD
 
 ## Check it out here!
 http://kimhart.github.io/Project2_Wiki/
@@ -14,10 +14,10 @@ http://kimhart.github.io/Project2_Wiki/
 * ActiveRecord/SQL
 
 ## User Stories
-* tbd
+* TBD
 
 ## Front-end Wireframes
-* tbd
+* TBD
 
 ## ERD/Data Models 
-* tbd
+* TBD
