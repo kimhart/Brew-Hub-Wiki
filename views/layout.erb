@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project 2 Wiki</title>
-  <link rel="Stylesheet" href="css/style.css">
+  <title>BeerHub Wiki</title>
+  <link rel="Stylesheet" href="/css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic,900,900italic' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="/js/main.js"></script>
 </head>
 <body>
-<%= yield %>
+  <header>
+  <form action="/sessions" method="POST">
+      <input type="hidden" name="_method" value="delete">
+      <button class="logout_btn">Log Out</button>
+      </form>
+  <h1><a href="/">BrewHub</a></h1>
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/articles">Articles</a></li>
+      <li><a href="/categories">Categories</a></li>
+      <li><a href="/articles/new">New Article</a></li>
+    </ul>
+  </header>
+<div class="main-page">
+  <%= yield %>
+</div>
 </body>
 </html>
