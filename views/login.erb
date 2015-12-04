@@ -1,0 +1,33 @@
+<div id="login-or-signup">
+  <h1>Welcome to BrewHub</h1>
+
+    <h2>Login</h2>
+      <form id = "login" action="/sessions" method="POST">
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username" placeholder="Username or Email">
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password">
+        <button>Log In</button>
+      </form>
+    </div>
+    <br>
+    <br>
+
+  <h2>Sign up:</h2>
+  <form id="signup" action="/users" method="POST">
+    <label for="username">Username: </label>
+    <input type="text" name="username" placeholder="Enter Username">
+    <label for="password">Password: </label>
+    <input type="password" name="password" placeholder="Enter Password">
+    <label for="password_confirmation">Confirm Password: </label>
+    <input type="password" name="password_confirmation" placeholder="Confirm Password">
+    <label for="first_name">First Name: </label>
+    <input type="text" name="first_name" placeholder="Enter First Name">
+    <label for="last_name">Last Name: </label>
+    <input type="text" name="last_name" placeholder="Enter Last Name">
+    <label for="location">Location: </label>
+    <input type="text" name="location" placeholder="City, State">
+    <button>Sign Up</button>
+  </form>
+
+</div>

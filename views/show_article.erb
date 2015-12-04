@@ -2,7 +2,7 @@
   <h1><%= @article.title %></h1>
     <img class="article_img" src="<%= @article.img_url %>" alt="<%= @article.title %>">
     <div class="article-content">
-      <%= @article.content %>
+      <%= $markdown.render(@article.content) %>
     </div>
 
     <a href="/articles/<%= @article.id %>/edit">Edit this Article</a>

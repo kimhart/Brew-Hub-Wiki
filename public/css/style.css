@@ -137,6 +137,7 @@ textarea {
   max-width: 80%;
   max-height: 400px;
   margin-bottom: 30px;
+  font-size: 14px;
 }
 
 .form_label {
@@ -173,7 +174,7 @@ Got some of the code below from the following site for Pinterest-style gallery d
 http://cssdeck.com/labs/css-only-pinterest-style-columns-layout 
 */
 
-#article-list, #category_list, #new_article, #show-article {
+#article-list, #category_list, #new_article, #show-article, #edit-article {
   width: 90%;
   max-width: 1100px;
   min-width: 800px;
@@ -182,7 +183,29 @@ http://cssdeck.com/labs/css-only-pinterest-style-columns-layout
   padding: 20px;
 }
 
-#article-list h1, #category-list h1, #new_article h1, #show-article h1 {
+#login-or-signup {
+  width: 90%;
+  max-width: 1100px;
+  min-width: 800px;
+  margin: 40px auto;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+#login-or-signup h1 {
+  font-size: 40px;
+  color: black;
+  font-weight: 300;
+  text-align: center;
+}
+
+#login-or-signuplogin-or-signup h2 {
+  font-size: 50px;
+  color: white;
+}
+
+#article-list h1, #category-list h1, #new_article h1, #show-article h1, #edit-article h1 {
   font-size: 40px;
   color: black;
   font-weight: 300;

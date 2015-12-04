@@ -9,7 +9,7 @@ CREATE TABLE users (
   username VARCHAR(25),
   password_digest VARCHAR,
   first_name VARCHAR,
-  age INTEGER,
+  last_name VARCHAR,
   location VARCHAR
 );
 
@@ -21,19 +21,14 @@ CREATE TABLE articles (
   last_edited VARCHAR,
   img_url TEXT,
   author_id INTEGER REFERENCES users(id),
-  category_id REFERENCES categories(id),
-  user_id REFERENCES users(id)
+  editor_id INTEGER REFERENCES users(id),
+  category_id REFERENCES categories(id)
 );
 
 CREATE TABLE categories (
   id INTEGER PRIMARY KEY,
   name VARCHAR,
   img_url TEXT
-);
-
-CREATE TABLE articles_users (
-  article_id INTEGER REFERENCES articles(id),
-  user_id INTEGER REFERENCES users(id)
 );
 
 CREATE TABLE articles_categories (
