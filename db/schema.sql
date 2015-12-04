@@ -8,6 +8,7 @@ CREATE TABLE users (
   id INTEGER PRIMARY KEY,
   username VARCHAR(25),
   password_digest VARCHAR,
+  first_name VARCHAR,
   age INTEGER,
   location VARCHAR
 );

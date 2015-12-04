@@ -5,9 +5,9 @@ require_relative '../models/user.rb'
 
 
 # users = [
-#   {username: "kimhart90@gmail.com", age: 25, location: "Brooklyn, NY"},
-#   {username: "alexhubbard89@gmail.com", age: 26, location: "Brooklyn, NY"},
-#   {username: "jujube921@yahoo.com", age: 25, location: "Boston, MA"}
+#   {username: "kimhart90@gmail.com", first_name: Kim, age: 25, location: "Brooklyn, NY"},
+#   {username: "alexhubbard89@gmail.com", first_name: Alex, age: 26, location: "Brooklyn, NY"},
+#   {username: "jujube921@yahoo.com", first_name: Juliette, age: 25, location: "Boston, MA"}
 # ]
 # User.create(users)
 

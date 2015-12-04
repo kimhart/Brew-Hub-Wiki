@@ -173,7 +173,7 @@ Got some of the code below from the following site for Pinterest-style gallery d
 http://cssdeck.com/labs/css-only-pinterest-style-columns-layout 
 */
 
-#article-list, #category_list, #new_article {
+#article-list, #category_list, #new_article, #show-article {
   width: 90%;
   max-width: 1100px;
   min-width: 800px;
@@ -182,7 +182,7 @@ http://cssdeck.com/labs/css-only-pinterest-style-columns-layout
   padding: 20px;
 }
 
-#article-list h1, #category-list h1, #new_article h1 {
+#article-list h1, #category-list h1, #new_article h1, #show-article h1 {
   font-size: 40px;
   color: black;
   font-weight: 300;
@@ -216,6 +216,13 @@ http://cssdeck.com/labs/css-only-pinterest-style-columns-layout
   border-bottom: 1px solid #ccc;
   padding-bottom: 15px;
   margin-bottom: 5px;
+}
+
+.article_img {
+  width: 250px;
+  height: auto;
+  border: 1px black;
+  margin-bottom: 20px;
 }
 
 .article_and_image p, .category_and_image p {
