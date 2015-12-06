@@ -20,30 +20,26 @@ module App
       erb :wrong_password
     end
 
-    post "/sessions/?" do
+    post "/sessions" do
       user = User.find_by({username: params[:username]})
       session[:user_id] = user.id
-      if session[:user_id] = nil
-        redirect to "/login/try-again"
-      else
       redirect to "/"
-      end
     end
 
-    get "/logout/?" do
+    get "/logout" do
       erb :logout
     end
 
-    delete "/sessions/?" do
+    delete "/sessions" do
       session[:user_id] = nil
       redirect to "/"
     end
 
-    get "/users/new/?" do
+    get "/users/new" do
        erb :new_user 
     end
 
-    get "/users/thanks-for-signing-up/?" do
+    get "/users/thanks-for-signing-up" do
       erb :thanks
     end
     
@@ -58,26 +54,25 @@ module App
       erb :all_articles
     end
 
-    get "/articles/new/?" do
+    get "/articles/new" do
       @user = User.find(session[:user_id]) if session[:user_id]
       erb :new_article
     end
 
-    get "/articles/:id/?" do
+    get "/articles/:id" do
       @user = User.find(session[:user_id]) if session[:user_id]
-      @article = Article.find(params['id'])
-      @author_id = @article.user
+      @article = Article.find(params[:id])
       erb :show_article
     end
 
-    get "/articles/:id/edit/?" do
+    get "/articles/:id/edit" do
       @user = User.find(session[:user_id]) if session[:user_id]
       @categories = Category.all
       @article = Article.find(params['id'])
       erb :edit_article
     end
 
-    post "/articles/?" do
+    post "/articles" do
       @user = User.find(session[:user_id])
       Article.create(
         author_id: @user.id, 
@@ -89,7 +84,7 @@ module App
       redirect to '/articles'
     end
 
-    patch "/articles/:id/?" do
+    patch "/articles/:id" do
       @user = User.find(session[:user_id])
       article = Article.find(params['id'])
       article.update({
@@ -100,7 +95,7 @@ module App
       redirect to "articles/#{article.id}"
     end
 
-    delete "/articles/:id/?" do
+    delete "/articles/:id" do
         id = params[:id]
         article = Article.find(params['id'])
         article.destroy

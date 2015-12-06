@@ -1,40 +1,47 @@
 <div id="login-or-signup">
-  <h2>Login</h2>
-  <div class="form-container">
+  <div id="wrap">
+    <div id="left_col">
+    <h2>Login</h2>
       <form action="/sessions" method="POST">
-        <label for="username">Username: </label>
-        <input type="text" name="username" id="username" placeholder="Username or Email">
+        <label for="username">Username/Email: </label>
+        <input type="text" name="username" id="username" placeholder="Username">
+        <br>
         <br>
         <label for="password">Password: </label>
         <input type="password" name="password" id="password" placeholder="*******">
         <br>
-        <button id="login-btn">Go!</button>
+        <br>
+        <button id="login-btn">Login</button>
       </form>
-  </div>
-  <div class="form-container">
-  <br>
-  <br>
-  <h2>Sign Up</h2>
-  <form action="/users" method="POST">
-    <label for="username">Username: </label>
-    <input type="text" name="username" placeholder="Enter Username">
-    <br>
-    <label for="password">Password: </label>
-    <input type="password" name="password" placeholder="Enter Password">
-    <br>
-    <label for="password_confirmation">Confirm Password: </label>
-    <input type="password" name="password_confirmation" placeholder="Confirm Password">
-    <br>
-    <label for="first_name">First Name: </label>
-    <input type="text" name="first_name" placeholder="Enter First Name">
-    <br>
-    <label for="last_name">Last Name: </label>
-    <input type="text" name="last_name" placeholder="Enter Last Name">
-    <br>
-    <label for="location">Location: </label>
-    <input type="text" name="location" placeholder="City, State">
-    <br>
-    <button id="signup-btn">Register</button>
-  </form>
-  </div>
+    </div>
+    <div id="right_col">
+      <h2>Sign Up</h2>
+      <form action="/users" method="POST">
+        <label for="username">Username/Email: </label>
+        <input type="text" name="username" placeholder="Username">
+        <br>
+        <br>
+        <label for="password">Password: </label>
+        <input type="password" name="password" placeholder="Password">
+        <br>
+        <br>
+        <label for="password_confirmation">Confirm Password: </label>
+        <input type="password" name="password_confirmation" placeholder="Confirm">
+        <br>
+        <br>
+        <label for="first_name">First Name: </label>
+        <input type="text" name="first_name" placeholder="Enter First Name">
+        <br>
+        <br>
+        <label for="last_name">Last Name: </label>
+        <input type="text" name="last_name" placeholder="Enter Last Name">
+        <br>
+        <br>
+        <label for="location">Location: </label>
+        <input type="text" name="location" placeholder="City, State">
+        <br>
+        <br>
+        <button id="signup-btn">Register</button>
+      </form>
+    </div>
 </div>

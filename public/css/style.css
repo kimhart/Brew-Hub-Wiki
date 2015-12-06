@@ -204,20 +204,6 @@ label {
   font-size: 70px;
 }
 
-#login-btn, #signup-btn {
-  background-color: #00cc66;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-weight: 400;
-  font-size: 16px;
-  width: 90px;
-  height: 2em;
-}
-
-#signup-btn{
-  margin-bottom: 30px;
-}
 
 #article-list h1, #category_list h1, #new_article h1, #show-article h1, #edit-article h1 {
   font-size: 40px;
@@ -228,13 +214,14 @@ label {
   margin-bottom: 40px;
 }
 
-#article-list, #category_list, #new_article, #show-article, #edit-article, #login-or-signup {
+#article-list, #category_list, #new_article, #show-article, #edit-article {
   width: 70%;
   max-width: 1100px;
   min-width: 800px;
   margin: 10px auto;
   background-color: white;
   padding: 5px;
+  display: block;
 }
 
 #login-or-signup h2 {
@@ -243,19 +230,79 @@ label {
   font-weight: 300;
 }
 
+#login-or-signup {
+  width: 80%;
+  max-width: 1100px;
+  min-width: 800px;
+  background-color: white;
+  height: 430px;
+  margin: 10px auto;
+  display: block;
+  padding: 5px;
+}
 
 #wrap {
-   width:600px;
-   margin:0 auto;
+   width:800px;
+   display: block;
+   margin: 0 auto;
 }
+
 #left_col {
    float:left;
-   width:300px;
+   width:350px;
+   margin-left: 30px;
 }
+
 #right_col {
-   float:left;
-   width:300px;
+   float:right;
+   width:350px;
+   margin-right: 30px;
 }
+
+#left_col label {
+  float:left;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#left_col input {
+ float:right;
+ margin-left: 20px;
+ float:right;
+ margin-left: 20px;
+ margin-bottom: 5px;
+ margin-right: 10px;
+}
+
+#right_col label {
+  float:left;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  display: inline;
+}
+
+#right_col input {
+ float: right;
+ margin-left: 20px;
+ float:right;
+ margin-left: 20px;
+ margin-bottom: 5px;
+ margin-right: 10px;
+}
+
+#login-btn, #signup-btn {
+  background-color: #00cc66;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  width: 100px;
+  float: right;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
 
 /* 
 Got some of the code below from the following site for Pinterest-style gallery display:

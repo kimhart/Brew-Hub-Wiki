@@ -1,10 +1,9 @@
 <% if @user %>
 <div class="article-content" id="show-article">
-<h1><%= @article.title %></h1>
-  <h2><%= @author_id %><h2>    
+<h1><%= @article.title %></h1>  
   <img class="article_img" src="<%= @article.img_url %>" alt="<%= @article.title %>">
     <div class="content-text">
-      <%=markdown(@article.content)%>
+   
     </div>
 
     <a href="/articles/<%= @article.id %>/edit">Edit this Article</a>
