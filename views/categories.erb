@@ -1,3 +1,4 @@
+<% if @user %>
 <div id="category_list">
 <h1>Browse categories:</h1>
   <div id="columns">
@@ -8,4 +9,11 @@
   </div>
   <% end %>
   </div>
+<% else %>
+<div id="please-login-or-signup">
+  <h3 class="please-login-or-signup">
+   <a href="/login">Please <br><u>login or signup</u><br>to continue.</a>
+  </h3>
+</div>
+<% end %>
 </div>

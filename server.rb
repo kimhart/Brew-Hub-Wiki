@@ -4,7 +4,7 @@ module App
     set :method_override, true
     enable :sessions
 
-    $markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
+    $markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, space_after_headers: true, tables: true, quote: true, underline: true)
 
     get "/" do
       @user = User.find(session[:user_id]) if session[:user_id]
@@ -12,49 +12,66 @@ module App
       erb :index
     end
 
-    get "/login" do
+    get "/login/?" do
       erb :login
     end
 
-    post "/sessions" do
-      user = User.find_by({username: params[:username]})
-      session[:user_id] = user.id
-      redirect to "/"
+    get "/login/try-again" do
+      erb :wrong_password
     end
 
-    get "/logout" do
+    post "/sessions/?" do
+      user = User.find_by({username: params[:username]})
+      session[:user_id] = user.id
+      if session[:user_id] = nil
+        redirect to "/login/try-again"
+      else
+      redirect to "/"
+      end
+    end
+
+    get "/logout/?" do
       erb :logout
     end
 
-    delete "/sessions" do
+    delete "/sessions/?" do
       session[:user_id] = nil
       redirect to "/"
     end
 
-    get "/users/new" do
+    get "/users/new/?" do
        erb :new_user 
+    end
+
+    get "/users/thanks-for-signing-up/?" do
+      erb :thanks
     end
     
     post "/users" do
        User.create(username: params["username"], password: params["password"], password_confirmation: params["password_confirmation"], first_name: params["first_name"], last_name: params["last_name"], location: params["location"])
-       redirect to "/"
+       redirect to "/users/thanks-for-signing-up"
     end
 
     get "/articles/?" do
+      @user = User.find(session[:user_id]) if session[:user_id]
       @articles = Article.all
       erb :all_articles
     end
 
     get "/articles/new/?" do
+      @user = User.find(session[:user_id]) if session[:user_id]
       erb :new_article
     end
 
     get "/articles/:id/?" do
+      @user = User.find(session[:user_id]) if session[:user_id]
       @article = Article.find(params['id'])
+      @author_id = @article.user
       erb :show_article
     end
 
     get "/articles/:id/edit/?" do
+      @user = User.find(session[:user_id]) if session[:user_id]
       @categories = Category.all
       @article = Article.find(params['id'])
       erb :edit_article
@@ -62,14 +79,24 @@ module App
 
     post "/articles/?" do
       @user = User.find(session[:user_id])
-      Article.create(author_id: @user.id, title: params["title"], date_created: params["date_created"], content: params["content"], img_url: params["img_url"], category_id: params["category_id"], user_id:["user_id"])
+      Article.create(
+        author_id: @user.id, 
+        title: params["title"], 
+        date_created: params["date_created"], 
+        content: params["content"], 
+        img_url: params["img_url"], 
+        category_id: params["category_id"])
       redirect to '/articles'
     end
 
     patch "/articles/:id/?" do
       @user = User.find(session[:user_id])
       article = Article.find(params['id'])
-      article.update({editor_id: @user.id, title: params["title"], content: params["content"], img_url: params["img_url"]})
+      article.update({
+        editor_id: @user.id, 
+        title: params["title"], 
+        content: params["content"], 
+        img_url: params["img_url"]})
       redirect to "articles/#{article.id}"
     end
 
@@ -81,6 +108,7 @@ module App
     end
 
     get "/categories/?" do
+      @user = User.find(session[:user_id]) if session[:user_id]
       @categories = Category.all
       erb :categories
     end

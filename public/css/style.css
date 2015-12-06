@@ -17,6 +17,8 @@ header {
   height: 200px;
   background-color: rgba(0, 0, 0, .8);
   width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 header h1 {
@@ -58,11 +60,6 @@ a:hover, button:hover{
   margin: 0 auto;
 }
 
-a {
-  color: #09C;
-  text-decoration: none;
-}
-
 .main-page h2 {
   font-size: 18px;
 }
@@ -96,18 +93,55 @@ li a:hover {
 }
 
 h1 {
-  padding-top: 5px;
-  font-weight: 300;
+  font-weight: 500;
+  margin-top: 170px;
   margin-bottom: 40px;
-  font-size: 90px;
+  font-size: 110px;
   color: white;
+  text-align: center;
+}
+
+p {
+  font-size: 14px;
+  color: black;
+}
+
+a {
+  color: #09C;
+  text-decoration: none;
+}
+
+img {
+  border-radius: 7px;
+}
+
+#please-login-or-signup {
+  border-radius: 10px;
+  padding: 5px;
+  height: 130px;
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, .8);
+  color: white;
+  font-weight: 300;
+}
+
+
+.please-login-or-signup a {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-weight: 300;
+  text-decoration: none;
 }
 
 form {
   display: block; 
   margin: 0 auto;
   position:relative;
-  width:80%;
+  width:100%;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
@@ -140,7 +174,7 @@ textarea {
   font-size: 14px;
 }
 
-.form_label {
+label {
   display: inline;
   margin-right: 5px;
 }
@@ -150,10 +184,6 @@ textarea {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
-#date_created {
-  width: 15%;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-}
 
 #submit {
   width: 20%;
@@ -169,48 +199,68 @@ textarea {
   width: 25%;
 }
 
+#login-or-signup h1 {
+  color: white;
+  font-size: 70px;
+}
+
+#login-btn, #signup-btn {
+  background-color: #00cc66;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  width: 90px;
+  height: 2em;
+}
+
+#signup-btn{
+  margin-bottom: 30px;
+}
+
+#article-list h1, #category_list h1, #new_article h1, #show-article h1, #edit-article h1 {
+  font-size: 40px;
+  color: black;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#article-list, #category_list, #new_article, #show-article, #edit-article, #login-or-signup {
+  width: 70%;
+  max-width: 1100px;
+  min-width: 800px;
+  margin: 10px auto;
+  background-color: white;
+  padding: 5px;
+}
+
+#login-or-signup h2 {
+  font-size: 30px;
+  color: black;
+  font-weight: 300;
+}
+
+
+#wrap {
+   width:600px;
+   margin:0 auto;
+}
+#left_col {
+   float:left;
+   width:300px;
+}
+#right_col {
+   float:left;
+   width:300px;
+}
+
 /* 
 Got some of the code below from the following site for Pinterest-style gallery display:
 http://cssdeck.com/labs/css-only-pinterest-style-columns-layout 
 */
-
-#article-list, #category_list, #new_article, #show-article, #edit-article {
-  width: 90%;
-  max-width: 1100px;
-  min-width: 800px;
-  margin: 40px auto;
-  background-color: white;
-  padding: 20px;
-}
-
-#login-or-signup {
-  width: 90%;
-  max-width: 1100px;
-  min-width: 800px;
-  margin: 40px auto;
-  background-color: black;
-  color: white;
-  padding: 20px;
-}
-
-#login-or-signup h1 {
-  font-size: 40px;
-  color: black;
-  font-weight: 300;
-  text-align: center;
-}
-
-#login-or-signuplogin-or-signup h2 {
-  font-size: 50px;
-  color: white;
-}
-
-#article-list h1, #category-list h1, #new_article h1, #show-article h1, #edit-article h1 {
-  font-size: 40px;
-  color: black;
-  font-weight: 300;
-  text-align: center;
-}
 
 #columns {
   -webkit-column-count: 3;
@@ -242,19 +292,33 @@ http://cssdeck.com/labs/css-only-pinterest-style-columns-layout
 }
 
 .article_img {
-  width: 250px;
+  width: 500px;
   height: auto;
   border: 1px black;
   margin-bottom: 20px;
 }
 
 .article_and_image p, .category_and_image p {
-  font: 12px/18px Arial, sans-serif;
-  color: #333;
-  margin: 0;
+  font-size: 14px;
+  color: black;
+  padding-bottom: 30px;
+  padding-right: 50px;
+  padding-left: 50px;
+  text-decoration: none;
+  font-weight: 400;
+  text-align: left;
 }
 
-
+.content-text {
+  font-size: 14px;
+  color: black;
+  padding-bottom: 30px;
+  padding-right: 50px;
+  padding-left: 50px;
+  text-decoration: none;
+  font-weight: 400;
+  text-align: left;
+}
 
 
 

@@ -1,6 +1,6 @@
+<% if @user %>
 <div id="new_article">
-  <h1> Write a new article! </h1>
-
+<h1> Write a new article! </h1>
   <form id="new_article" action="/articles" method="POST">
     <label for="title" class="form_label">Title: </label>
     <input type="text" name="title" id="title" placeholder="Ex: Home Brew 101" autofocus>
@@ -19,6 +19,13 @@
      <br>
     <label for="img_url" class="form_label">Include an image: </label>
     <input type="text-area" name="img_url" id="img_url" placeholder="Ex: favoriteIPA.jpg">
-    <input type="submit" name="submit" id="submit" placeholder="Submit Article">
+    <input type="submit" name="submit" id="submit" value="Submit">
   </form>
+<% else %>
+<div id="please-login-or-signup">
+  <h3 class="please-login-or-signup">
+   <a href="/login">Please <br><u>login or signup</u><br>to continue.</a>
+  </h3>
+</div>
+<% end %>
 </div>
