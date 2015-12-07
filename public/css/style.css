@@ -52,6 +52,7 @@ a:hover, button:hover{
   color: white;
   font-size: 16px;
   font-weight: 300;
+  text-align: right;
 }
 
 .main-page {

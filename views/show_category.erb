@@ -4,9 +4,8 @@
   <img class="category_img" src="<%= @category.img_url %>" alt="<%= @category.name %>">
   <div id="article-list">
   <div id="columns">
-  <%= @category.articles.first %>
-     
-  
+  <p><%= @category.articles.first %></p>
+    
   </div>
 <% else %>
   <div id="please-login-or-signup">
