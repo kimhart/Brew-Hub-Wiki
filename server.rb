@@ -118,9 +118,8 @@ module App
     get "/categories/:id" do
       @user = User.find(session[:user_id]) if session[:user_id]
       @category = Category.find(params['id'])
-      @articles = @category.articles
-      #find all the articles where their category id == params['id']
       erb :show_category
+
 
     end 
 

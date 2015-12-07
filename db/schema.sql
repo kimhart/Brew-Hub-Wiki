@@ -22,7 +22,7 @@ CREATE TABLE articles (
   img_url TEXT,
   author_id INTEGER REFERENCES users(id),
   editor_id INTEGER REFERENCES users(id),
-  category_id REFERENCES categories(id)
+  category_id INTEGER REFERENCES categories(id)
 );
 
 CREATE TABLE categories (

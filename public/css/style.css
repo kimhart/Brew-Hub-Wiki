@@ -94,9 +94,9 @@ li a:hover {
 
 h1 {
   font-weight: 500;
-  margin-top: 120px;
+  margin-top: 70px;
   margin-bottom: 40px;
-  font-size: 110px;
+  font-size: 90px;
   color: white;
   text-align: center;
 }
@@ -379,6 +379,7 @@ http://cssdeck.com/labs/css-only-pinterest-style-columns-layout
   font-weight: 400;
   text-align: left;
 }
+
 
 
 
