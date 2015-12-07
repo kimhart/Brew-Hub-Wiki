@@ -38,9 +38,9 @@ Article.create(articles)
 
 
 users = [
-  {username: "kimhart90@gmail.com", first_name: "Kim", last_name: "Hart", location: "Brooklyn, NY", password_digest: "$2a$10$GbTfx9uOnJ3DyTZG3ypdNOggue7Mr8b5i.8NRG/TTy8Y7AGvn6LVK"},
-  {username: "alexhubbard89@gmail.com", first_name: "Alex", last_name: "Hubbard", location: "Brooklyn, NY", password_digest: "$2a$10$GbTfx9uOnJ3DyTZG3ypdNOggue7Mr8b5i.8NRG/TTy8Y7AGvn6LVK"},
-  {username: "jujube921@yahoo.com", first_name: "Juliette", last_name: "Garner", location: "Boston, MA", password_digest: "$2a$10$GbTfx9uOnJ3DyTZG3ypdNOggue7Mr8b5i.8NRG/TTy8Y7AGvn6LVK"}
+  {username: "kimhart90@gmail.com", first_name: "Kim", last_name: "Hart", location: "Brooklyn, NY", password_digest: "password"},
+  {username: "alexhubbard89@gmail.com", first_name: "Alex", last_name: "Hubbard", location: "Brooklyn, NY", password_digest: "password"},
+  {username: "jujube921@yahoo.com", first_name: "Juliette", last_name: "Garner", location: "Boston, MA", password_digest: "password"}
 ]
 User.create(users)
 

@@ -1,5 +1,8 @@
 require "active_record"
 
+ActiveRecord::Base.logger = Logger.new(STDERR) 
+
+
 if ENV['RACK_ENV'] == "production"
   require 'uri'
   db = URI.parse(ENV['DATABASE_URL'])
@@ -13,14 +16,12 @@ if ENV['RACK_ENV'] == "production"
   })
 else
 
-ActiveRecord::Base.logger = Logger.new(STDERR)
-
 ActiveRecord::Base.establish_connection(
   :adapter => 'sqlite3',
   :database =>  'db/wiki_db.sqlite3'
 )
+end
 
 Dir.glob("models/*.rb").each do |path|
   require_relative "../#{path}"
-end 
 end
