@@ -81,7 +81,7 @@ module App
       @categories = Category.all
       Article.create({
         author_id: @user.id, 
-        date_created: DATETIME.now, 
+        date_created: params["date_created"], 
         title: params["title"], 
         category_id: params["category_id"],
         content: params["content"], 
@@ -93,13 +93,12 @@ module App
       @user = User.find(session[:user_id])
       @categories = Category.all
       article = Article.find(params['id'])
-      article.update({
-        editor_id: @user.id,
-        last_edited: DATETIME.now, 
+      article.update(
+        editor_id: @user.id, 
         title: params["title"], 
         category_id: params["category_id"],
         content: params["content"], 
-        img_url: params["img_url"]})
+        img_url: params["img_url"])
       redirect to "articles/#{article.id}"
     end
 
@@ -122,6 +121,7 @@ module App
       @articles = @category.articles
       #find all the articles where their category id == params['id']
       erb :show_category
+
     end 
 
   end #Server

@@ -2,14 +2,15 @@
 <div class="article-content" id="show-article">
 <h1><%= @article.title %></h1>  
   <img class="article_img" src="<%= @article.img_url %>" alt="<%= @article.title %>">
-    <h3>Written by Author
+    <h3><em>Written by <%= @article.author.first_name%></em></h3>
+    <HR width="60%">
     <br>
-    Category: <%= @article.category_id %>
-    </h3>
     <div class="content-text">
     <%=markdown(@article.content)%>
     </div>
     <a href="/articles/<%= @article.id %>/edit">Edit this Article</a>
+    <br>
+    <br>
 <% else %>
 <div id="please-login-or-signup">
   <h3 class="please-login-or-signup">
