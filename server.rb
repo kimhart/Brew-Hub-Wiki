@@ -8,7 +8,7 @@ module App
 
     get "/" do
       @user = User.find(session[:user_id]) if session[:user_id]
-      redirect to "/login" if !@user 
+      redirect to "/login" if !@user
       erb :index
     end
 
@@ -21,9 +21,13 @@ module App
     end
 
     post "/sessions" do
-      user = User.find_by({username: params[:username]})
+      user = User.find_by({username: params[:username]}).try(:authenticate, params[:password])
+      if user
       session[:user_id] = user.id
       redirect to "/"
+      else 
+      redirect to "/login/try-again"
+      end
     end
 
     get "/logout" do
@@ -61,7 +65,7 @@ module App
 
     get "/articles/:id" do
       @user = User.find(session[:user_id]) if session[:user_id]
-      @article = Article.find(params[:id])
+      @article = Article.find(params['id'])
       erb :show_article
     end
 
@@ -72,24 +76,28 @@ module App
       erb :edit_article
     end
 
-    post "/articles" do
+    post "/articles/new" do
       @user = User.find(session[:user_id])
-      Article.create(
+      @categories = Category.all
+      Article.create({
         author_id: @user.id, 
+        date_created: DATETIME.now, 
         title: params["title"], 
-        date_created: params["date_created"], 
+        category_id: params["category_id"],
         content: params["content"], 
-        img_url: params["img_url"], 
-        category_id: params["category_id"])
+        img_url: params["img_url"]})
       redirect to '/articles'
     end
 
     patch "/articles/:id" do
       @user = User.find(session[:user_id])
+      @categories = Category.all
       article = Article.find(params['id'])
       article.update({
-        editor_id: @user.id, 
+        editor_id: @user.id,
+        last_edited: DATETIME.now, 
         title: params["title"], 
+        category_id: params["category_id"],
         content: params["content"], 
         img_url: params["img_url"]})
       redirect to "articles/#{article.id}"
@@ -107,6 +115,14 @@ module App
       @categories = Category.all
       erb :categories
     end
+
+    get "/categories/:id" do
+      @user = User.find(session[:user_id]) if session[:user_id]
+      @category = Category.find(params['id'])
+      @articles = @category.articles
+      #find all the articles where their category id == params['id']
+      erb :show_category
+    end 
 
   end #Server
 end #App 

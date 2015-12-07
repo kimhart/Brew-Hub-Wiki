@@ -1,19 +1,19 @@
 <% if @user %>
 <div id="new_article">
 <h1> Write a new article! </h1>
-  <form id="new_article" action="/articles" method="POST">
+  <form id="new_article" action="/articles/new" method="POST">
     <label for="title" class="form_label">Title: </label>
     <input type="text" name="title" id="title" placeholder="Ex: Home Brew 101" autofocus>
     <br>
     <label for="content" class="form_label">Article Content: </label>
-    <textarea name="content" form="new_article" placeholder="Enter text here..."></textarea>
+    <textarea name="content" id="content" placeholder="Enter text here..."></textarea>
    <label for="category_id" class="form_label">Choose a Category: </label>
       <select id="category_id" form="category_id">
         <option value="" disabled selected>Select</option>
-        <option value="Know Your Beer">Know Your Beer</option>
-        <option value="Bartending Tips">Bartending Tips</option>
-        <option value="Food Pairings">Food Pairings</option>
-        <option value="Home Brewing">Home Brewing</option>
+        <option value="1">Know Your Beer</option>
+        <option value="2">Bartending Tips</option>
+        <option value="3">Food Pairings</option>
+        <option value="4">Home Brewing</option>
      </select>
      <br>
      <br>

@@ -94,7 +94,7 @@ li a:hover {
 
 h1 {
   font-weight: 500;
-  margin-top: 170px;
+  margin-top: 120px;
   margin-bottom: 40px;
   font-size: 110px;
   color: white;
@@ -205,7 +205,7 @@ label {
 }
 
 
-#article-list h1, #category_list h1, #new_article h1, #show-article h1, #edit-article h1 {
+#article-list h1, #category_list h1, #new_article h1, #show-article h1, #edit-article h1, #show-category h1 {
   font-size: 40px;
   color: black;
   font-weight: 300;
@@ -214,8 +214,8 @@ label {
   margin-bottom: 40px;
 }
 
-#article-list, #category_list, #new_article, #show-article, #edit-article {
-  width: 70%;
+#article-list, #category_list, #new_article, #show-article, #edit-article, #show-category {
+  width: 80%;
   max-width: 1100px;
   min-width: 800px;
   margin: 10px auto;
@@ -303,6 +303,18 @@ label {
   margin-right: 10px;
 }
 
+.delete-article-btn {
+  background-color: white;
+  border:none;
+  color: #e60000;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#delete-article-form {
+  margin-bottom: 30px;
+}
 
 /* 
 Got some of the code below from the following site for Pinterest-style gallery display:
@@ -338,11 +350,12 @@ http://cssdeck.com/labs/css-only-pinterest-style-columns-layout
   margin-bottom: 5px;
 }
 
-.article_img {
+.article_img, .category_img {
   width: 500px;
   height: auto;
   border: 1px black;
   margin-bottom: 20px;
+  margin-top: 0;
 }
 
 .article_and_image p, .category_and_image p {

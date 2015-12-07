@@ -4,31 +4,27 @@
   <h1><%= @article.title %></h1>
 
   <form action="/articles/<%= @article["id"] %>" method="POST">
-
     <input type="hidden" name="_method" value="patch">
-
     <label for="title" class="form_label">Title: </label>
     <input type="text" name="title" id="title" placeholder="Ex: Home Brew 101" autofocus value="<%= @article.title %>">
     <br>
     <label for="content" class="form_label">Article Content: </label>
-    <textarea name="content" placeholder="Enter text here..."> <%= @article.content %></textarea>
+    <textarea name="content" id="content" placeholder="Enter text here..."><%=@article.content%></textarea>
     <label for="category_id" class="form_label">Choose a Category: </label>
     <select id="category_id" name="category_id">
-      <% @categories.each do |category| %>
-        <option value="<%= category.id %>" <%= "selected" if @article.category_id == category.id  %>><%= category.name %></option>
-      <% end %>
+     <% @categories.each do |category| %>
+        <option value="<%= category.id %>" <%= "selected" if @article.category_id = category.id  %>><%= category.name %></option>
+        <% end %>
     </select>
     <br>
     <br>
     <label for="img_url" class="form_label">Include an image: </label>
     <input type="text-area" name="img_url" id="img_url" placeholder="Ex: favoriteIPA.jpg"  value="<%= @article.img_url %>">
     <input type="submit" name="submit" id="submit" value="Submit Changes">
-    </form>
-</form>
-
-  <form action="/articles/<%= @article["id"] %>" method="POST">
+  </form>
+  <form id="delete-article-form" action="/articles/<%= @article["id"] %>" method="POST">
     <input type="hidden" name="_method" value="DELETE">
-    <button>Delete</button>
+    <button class="delete-article-btn">Delete this Article</button>
   </form>
 <% else %>
 <div id="please-login-or-signup">
