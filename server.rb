@@ -118,6 +118,7 @@ module App
     get "/categories/:id" do
       @user = User.find(session[:user_id]) if session[:user_id]
       @category = Category.find(params['id'])
+      @articles = @category.articles
       erb :show_category
 
 

@@ -2,7 +2,8 @@
 <div class="article-content" id="show-article">
 <h1><%= @article.title %></h1>  
   <img class="article_img" src="<%= @article.img_url %>" alt="<%= @article.title %>">
-    <h3><em>Written by <%= @article.author.first_name%> <%= @article.author.last_name%></em></h3>
+    <p><em>Written by <%= @article.author.first_name%> <%= @article.author.last_name%></em></p>
+    <p>Category: <%= @article.categories.name %></p>
     <HR width="60%">
     <br>
     <div class="content-text">

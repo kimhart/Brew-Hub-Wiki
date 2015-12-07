@@ -2,10 +2,12 @@
 <div class="article-content" id="show-category">
   <h1><%= @category.name %></h1> 
   <img class="category_img" src="<%= @category.img_url %>" alt="<%= @category.name %>">
-  <div id="article-list">
-  <div id="columns">
-  <p><%= @category.articles.first %></p>
-    
+ <% @articles.each do |article| %>
+    <div class="article_and_image">
+    <h2><a href="/articles/<%= article.id %>"><%= article.title %></a></h2>
+    <img class="article_img" src="<%= article.img_url %>" alt="<%= article.title %>">
+  </div>
+  <% end %>
   </div>
 <% else %>
   <div id="please-login-or-signup">
