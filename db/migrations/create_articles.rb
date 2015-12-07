@@ -8,6 +8,9 @@ class CreateArticles < ActiveRecord::Migration
       t.string(:content)
       t.string(:last_edited)
       t.string(:img_url)
+      t.integer(:author_id)
+      t.integer(:editor_id)
+      t.integer(:category_id)
     end
   end
 
