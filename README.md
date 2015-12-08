@@ -1,7 +1,7 @@
 # Project 2: BrewHub Wiki
 
 ## Description
-Welcome to BrewHub, an interactive wiki for brewers and beer lovers alike. This full-stack allows users to read, write and edit shared articles surrounding craft beer culture. 
+Welcome to BrewHub, an interactive wiki for brewers and beer lovers alike. This full-stack app allows users to read, write and edit shared articles surrounding craft beer culture. 
 
 ## Check it out!
 
