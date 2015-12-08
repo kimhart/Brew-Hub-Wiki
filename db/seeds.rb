@@ -3,6 +3,7 @@ require_relative '../models/article.rb'
 require_relative '../models/category.rb'
 require_relative '../models/user.rb'
 
+
 categories = [
   {name: "Know Your Beer", img_url: "http://www.camdentownbrewery.com/wp-content/uploads/2012/12/varietiesofbeer.jpg"},
   {name: "Bartending Tips", img_url: "http://media.cleveland.com/taste_impact/photo/pouring-beerjpg-ba1c502a5f1db7b5.jpg"},
