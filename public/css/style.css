@@ -351,7 +351,7 @@ http://cssdeck.com/labs/css-only-pinterest-style-columns-layout
   margin-bottom: 5px;
 }
 
-.article_img, .category_img {
+.article_img, .category_img, .category_img {
   width: 500px;
   height: auto;
   border: 1px black;

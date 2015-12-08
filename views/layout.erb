@@ -9,17 +9,27 @@
 </head>
 <body>
   <header>
+  <% if @user %>
   <form action="/sessions" method="POST">
       <input type="hidden" name="_method" value="delete">
-      <button class="logout_btn">Log Out</button>
+      <button class="logout_btn">Not <%= @user.first_name%>? Log Out</button>
       </form>
-  <h1><a href="/">BrewHub</a></h1>
+    <h1><a href="/">BrewHub</a></h1>
     <ul class="nav">
       <li><a href="/">Home</a></li>
       <li><a href="/articles">Articles</a></li>
       <li><a href="/categories">Categories</a></li>
       <li><a href="/articles/new">New Article</a></li>
     </ul>
+    <% else %>
+    <h1><a href="/">BrewHub</a></h1>
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/articles">Articles</a></li>
+      <li><a href="/categories">Categories</a></li>
+      <li><a href="/articles/new">New Article</a></li>
+    </ul>
+    <% end %>
   </header>
 <div class="main-page">
   <%= yield %>

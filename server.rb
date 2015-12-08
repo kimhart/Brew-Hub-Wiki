@@ -79,13 +79,15 @@ module App
     post "/articles/new" do
       @user = User.find(session[:user_id])
       @categories = Category.all
-      Article.create({
+      article = Article.create({
         author_id: @user.id, 
         date_created: params["date_created"], 
         title: params["title"], 
         category_id: params["category_id"],
         content: params["content"], 
         img_url: params["img_url"]})
+      c1 = Category.find(params[:category_id])
+      article.categories.push(c1)
       redirect to '/articles'
     end
 
@@ -99,6 +101,9 @@ module App
         category_id: params["category_id"],
         content: params["content"], 
         img_url: params["img_url"])
+      c1 = Category.find(params[:category_id])
+      article.categories.clear
+      article.categories.push(c1)
       redirect to "articles/#{article.id}"
     end
 
@@ -120,6 +125,8 @@ module App
       @category = Category.find(params['id'])
       @articles = @category.articles
       erb :show_category
+
+
 
 
     end 
