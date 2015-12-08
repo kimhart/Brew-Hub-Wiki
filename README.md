@@ -1,11 +1,11 @@
 # Project 2: BrewHub Wiki
 
 ## Description
-*Brewery X* needed an easy way for colleagues and beer lovers to communicate about brewery events, new beer, and homebrewing tips. With this full-stack web app, users can read, write and edit shared articles surrounding craft beer culture. 
+Welcome to BrewHub, an interactive wiki for brewers and beer lovers alike. This full-stack allows users to read, write and edit shared articles surrounding craft beer culture. 
 
 ## Check it out!
 
-:beers: Click [here](http://kimhart.github.io/Project2_Wiki/) to view now.
+:beers: Click [here](https://peaceful-garden-4167.herokuapp.com/login) to view now.
 
 ## List of Technologies
 * HTML
@@ -20,7 +20,8 @@
 * The user should be able to **edit** an article that already exists.
 * The user should to be able to **add a category** to an article.
 * The user should be able to **view a list of all articles** that currently exist.
-* User should be able to see each article's author, the time and date it was posted, the corresponding categor(ies), and when the post was last edited. 
+* The user should be able to **view** the articles within a given category.
+* User should be able to see each article's author and the corresponding category.
 
 ## Front-end Wireframes
 #### Splash/Login
